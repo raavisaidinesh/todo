@@ -1,0 +1,97 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.container{
+    min-height: 100vh;
+    background-color: blue;
+    padding: 10px;
+}
+.todo{
+    max-width: 500px;
+    background-color: #fff;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo h2{
+    color: #002765;
+    display: flex;
+    margin-bottom: 40px;
+
+}
+.todo h2 img{
+    width: 25px;
+    margin-left: 10px;
+}
+.user {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #edeef0;
+    padding-left: 15px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+
+}
+.user input{
+    flex:1;/* for covering the full width of the flex container*/
+    padding: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+.user button{
+    padding: 14px 34px;
+    border-radius: 20px;
+    background-color: #45ff96;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+#listcont li{
+    margin-left: 30px;
+    margin-bottom:20px;
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+}
+#listcont li::before{
+    content: " ";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    top:1px;
+    left:-30px;
+}
+#listcont .checked{
+    text-decoration: line-through;
+    color: #555;
+}
+#listcont .checked::before{
+    background-image: url(checked.png);
+
+}
+span{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0px;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+span:hover{
+    background-color: #edeef0;
+}
